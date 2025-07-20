@@ -1,0 +1,53 @@
+:root{
+    --main-color: #1F4E79;
+    --main-bg-color: #F3F3F3;
+}
+
+/* Start Intial Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: None;
+}
+a{
+    text-decoration: none;
+}
+
+/*End Intial Styles */
+
+/* Start Components */
+
+.container {
+    padding: 0 15px;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1200px;
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    .container {
+      max-width: 1230px;
+    }
+  }
+
+/*End Components */
