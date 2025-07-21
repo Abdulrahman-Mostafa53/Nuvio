@@ -324,6 +324,10 @@ section.about .container .image {
   position: relative;
 }
 
+section.about .container .image img {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   section.about .container .image:before {
     content: "";
@@ -336,6 +340,9 @@ section.about .container .image {
     background-color: transparent;
     border: 10px solid var(--main-color);
     z-index: -1;
+  }
+  section.about .container .image img {
+    width: fit-content;
   }
 }
 
