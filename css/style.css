@@ -14,6 +14,7 @@
 }
 body{
   font-family: var(--main-font);
+  overflow-x: hidden;
 }
 ul{
     list-style: None;
@@ -311,7 +312,6 @@ section.hero main .container .links ul li a {
 }
 
 /* End Header and Hero Section */
-
 /* Start Experience Section */
 .Experience{
   background-color: var(--main-bg-color);
@@ -330,6 +330,7 @@ section.hero main .container .links ul li a {
 .Experience .image{
   flex: 1;
   position: relative;
+  margin-right: 25px;
 }
 .Experience .image img{
   width: 100%;
@@ -418,11 +419,14 @@ section.hero main .container .links ul li a {
   line-height: 26px;
   color: #565656;
   margin-bottom: 40px;
-  font: 500 18px var(--sec-font) !important;
+  font: 500 18px var(--sec-font);
 }
 @media (max-width:1024px){
+  .Experience .container h2{
+    font-size: 42px;
+  }
  .Experience .image{
-     flex: 3;
+     flex: 2;
  }
  .boxes::before{
   height: 77%;
@@ -436,5 +440,12 @@ section.hero main .container .links ul li a {
   .boxes::before{
     height: 78%;
    }
+   .Experience .image::after{
+    display: none;
+  }
+  .Experience .image{
+    margin-right:0px;
+    
+  }
 }
 /* End Experience Section */
