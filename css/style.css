@@ -344,6 +344,7 @@ section.hero main .container .links ul li a {
 }
 
 /* End Header and Hero Section */
+
 /* Start About Section */
 
 section.about .container {
@@ -444,6 +445,7 @@ section.about .container .text a {
 }
 
 /* End About Section */
+
 /* Start Experience Section */
 .Experience{
   background-color: var(--main-bg-color);
@@ -579,8 +581,8 @@ section.about .container .text a {
   }
 }
 /* End Experience Section */
-/* Start Services Section */
 
+/* Start Services Section */
 section.services .container .wrapper {
   display: flex;
   justify-content: space-between;
@@ -658,3 +660,26 @@ section.services .container .wrapper .service p {
 }
 
 /* End Services Section */
+
+/* Start Works Section */
+.Works .boxes{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-gap: 20px;
+}
+.Works .box {
+  display: flex;
+}
+.Works .box img{
+  width: 100%;
+}
+.Works .main-btn{
+  margin: auto;
+  margin-top: 40px;
+}
+@media (max-width: 768px){
+  .Works .boxes{
+    display: grid;
+  }
+}
+/* End Works Section */
