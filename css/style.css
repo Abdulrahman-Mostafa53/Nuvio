@@ -311,100 +311,130 @@ section.hero main .container .links ul li a {
 }
 
 /* End Header and Hero Section */
-/* Start About Section */
 
-section.about .container {
+/* Start Experience Section */
+.Experience{
+  background-color: var(--main-bg-color);
+  padding-top: 86px;
+  padding-bottom: 75px;
+}
+.Experience .container{
   display: flex;
-  gap: 20px;
-  flex-direction: column-reverse;
+  gap: 100px;
   align-items: center;
+  justify-content: center;
 }
-
-section.about .container .image {
+.Experience .text{
+  flex:2;
+}
+.Experience .image{
+  flex: 1;
   position: relative;
 }
-
-section.about .container .image img {
+.Experience .image img{
   width: 100%;
-}
-
-@media (min-width: 768px) {
-  section.about .container .image:before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: -25px;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: transparent;
-    border: 10px solid var(--main-color);
-    z-index: -1;
-  }
-  section.about .container .image img {
-    width: fit-content;
-  }
-}
-
-section.about .container .text {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
   position: relative;
-  gap: 20px;
+  z-index: 1;
 }
-
-section.about .container .text .heading {
-  position: relative;
-}
-
-section.about .container .text h1 {
-  width: fit-content;
-  margin: auto;
-  padding: 10px;
-  padding-bottom: 0;
-  background: #fff;
-  color: var(--main-color);
-  font-size: 35px;
-  font-weight: 450;
-}
-
-section.about .container .text hr {
+.Experience .image::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 25px;
+  top: 25px;
   position: absolute;
-  width: 100%;
-  border: 1px solid #000;
-  top: 50%;
+  box-sizing: border-box;
+  border: 10px solid var(--main-color);
+}
+.Experience .container h2{
+  color: var(--main-color);
+  font: 450 64px var(--main-font);
+  padding-bottom: 5px;
+  position: relative;
+}
+.Experience .container h2::after{
+  content: "";
+  background-color: black;
+  width: 20%;
   left: 0;
-  transform: translateY(-50%);
-  z-index: -1;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
 }
-
-section.about .container .text p {
-  font-size: 18px;
-  line-height: 1.6;
-  font-family: var(--sec-font);
+.Experience .boxes{
+  margin-top:50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  position: relative;
+  padding-left: 24px;
 }
-
-section.about .container .text a {
-  margin: auto;
+.boxes::before{
+  content: "";
+  position: absolute;
+  height:79%;
+  top: -50px;
+  width: 2px;
+  left: 0;
+  background-color: black;
 }
-
-@media (min-width: 1024px) {
-  section.about .container {
-    flex-direction: row;
-    gap: 100px;
-  }
-  section.about .container .text {
-    gap: 30px;
-    text-align: left;
-  }
-  section.about .container .text h1 {
-    margin: 0;
-    font-size: 64px;
-  }
-  section.about .container .text a {
-    margin: 0;
-  }
+.Experience .box p:nth-child(1){
+  background-color: var(--main-color);
+  font: bold 20px var(--sec-font);
+  color: white;
+  width: fit-content;
+  padding: 10px 15px;
+  position: relative;
 }
-
-/* End About Section */
+.Experience .box p:nth-child(1)::after{
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: -24px;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.Experience .box p:nth-child(1)::before{
+  content: "";
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  transform: translate(0,-50%);
+  border: 15px solid var(--main-color);
+  border-color: #f3f3f300 var(--main-color) rgba(255, 255, 0, 0) rgba(255, 0, 0, 0);
+}
+.Experience .box p:nth-child(2){
+  margin: 5px 0px;
+  font: bold 20px var(--sec-font);
+}
+.Experience .box p:nth-child(3){
+  font: bold 14px var(--sec-font);
+  color: #A47D7D;
+}
+.Experience .box p:nth-child(4){
+  margin: 5px 0px;
+  line-height: 26px;
+  color: #565656;
+  margin-bottom: 40px;
+  font: 500 18px var(--sec-font) !important;
+}
+@media (max-width:1024px){
+ .Experience .image{
+     flex: 3;
+ }
+ .boxes::before{
+  height: 77%;
+ }
+}
+@media (max-width: 768px){
+  .Experience .container{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .boxes::before{
+    height: 78%;
+   }
+}
+/* End Experience Section */
