@@ -554,6 +554,9 @@ section.about .container .text a {
   font: 500 18px var(--sec-font);
 }
 @media (max-width:1024px){
+  .Experience .container{
+    gap: 20px;
+  }
   .Experience .container h2{
     font-size: 42px;
   }
@@ -662,13 +665,25 @@ section.services .container .wrapper .service p {
 /* End Services Section */
 
 /* Start Works Section */
+.Works{
+  background-color: var(--main-bg-color);
+}
+.Works h1{
+  background-color: var(--main-bg-color);
+  position: relative;
+  z-index: 5;
+}
+.Works .heading hr{
+  z-index: 0;
+}
 .Works .boxes{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  grid-gap: 20px;
+  grid-gap: 50px 20px;
 }
 .Works .box {
   display: flex;
+  position: relative;
 }
 .Works .box img{
   width: 100%;
@@ -677,12 +692,169 @@ section.services .container .wrapper .service p {
   margin: auto;
   margin-top: 40px;
 }
+.Works span{
+  position: absolute;
+  font: 500 18px var(--main-font);
+  color: white;
+  padding: 12px;
+  background-color: var(--main-color);
+  top: 0;
+  width: 75%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  left: 50%;
+}
 @media (max-width: 768px){
-  .Works .boxes{
-    display: grid;
+  .Works span{
+    font-size: 15px;
   }
 }
 /* End Works Section */
+
+/* Start Testimonials Section */
+.Testimonials .heading{
+  margin-bottom: 90px;
+}
+.Testimonials .content{
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  position: relative;
+}
+.Testimonials .container{
+  position: relative;
+}
+.Testimonials .text{
+  flex: 5;
+  position: relative;
+}
+.Testimonials .image{
+  flex: 3;
+  position: relative;
+  height: fit-content;
+  margin-left: 15px;
+}
+.Testimonials .image::after{
+  content: "";
+  border: 10px solid var(--main-color);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  left: -25px;
+  top: 25px;
+  z-index: -1;
+  align-self: center;
+}
+.Testimonials .image::before{
+  content: "\f10e";
+  font: 900 45px "Font Awesome 6 Free";
+  width: 67px;
+  height: 67px;
+  color:white;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  right: 0;
+  transform: translate(50%,-50%);
+}
+.Testimonials img{
+  width: 100%;
+}
+.Testimonials h2{
+  font: 450 48px var(--main-font);
+  position: relative;
+  padding: 15px 0 5px 0;
+  color: var(--main-color);
+}
+.Testimonials h2::before{
+  content: "";
+  width: 35%;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+}
+.Testimonials p:nth-of-type(1){
+  font: 500 16px var(--sec-font);
+  color: #565656;
+}
+.Testimonials p:nth-of-type(2){
+  font: 500 24px var(--sec-font);
+  color: #565656;
+  padding-left: 20px;
+  padding-top: 10px;
+  margin-top: 30px;
+  position: relative;
+  max-width: 600px;
+}
+.Testimonials p:nth-of-type(2)::before{
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 90%;
+  left: 0;
+  top: 0;
+  background-color: var(--main-color);
+}
+.Testimonials .text::after{
+  content: "\f105";
+  color: var(--main-color);
+  font-size: 500px;
+  font: 900 50px "Font Awesome 6 Free";
+  top: 50%;
+  right: 0;
+  position: absolute;
+}
+.Testimonials .shape{
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+  width: 100%;
+  justify-content: center;
+}
+.Testimonials .sq{
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  border: 2px solid var(--main-color);
+}
+.Testimonials .sq:nth-child(1){
+  background-color: var(--main-color);
+}
+@media (max-width: 1200px){
+  .Testimonials p:nth-of-type(2){
+    max-width: 490px;
+  }
+}
+@media (max-width: 1024px){
+  .Testimonials .content{
+    flex-direction: column;
+  }
+  .Testimonials .image{
+    flex: 4;
+  }
+  .Testimonials .text{
+    display: flex;
+    align-items: flex-start;
+    flex:1;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .Testimonials p:nth-of-type(2){
+    max-width: 100%;
+    padding-right: 70px;
+  }
+  .Testimonials h2::before{
+    width: 100%;
+  }
+}
+
+/* End Testimonials Section */
+
 /* Start Contact Section */
 
 section.contact {
@@ -858,6 +1030,7 @@ section.contact .wrapper .newsletter p:nth-of-type(2):before {
 }
 
 /* End Contact Section */
+
 /* Start Footer */
 
 footer {
