@@ -55,6 +55,38 @@ a{
     }
 }
 
+section {
+  padding: 60px 0;
+}
+
+a.main-btn {
+  display: block;
+  width: fit-content;
+  padding: 10px 18px;
+  font: bold 18px var(--sec-font);
+  color: #fff;
+  background-color: var(--main-color);
+  position: relative;
+}
+
+a.main-btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 3px solid var(--main-color);
+  transition: .2s;
+}
+
+a.main-btn:hover:after {
+  top: 5px;
+  left: 5px;
+}
+
 /* End Components and Utilities */
 /* Start Header and Hero Section */
 
@@ -62,6 +94,7 @@ section.hero {
   background: url("../imgs/hero-background.jpg");
   background-size: cover;
   position: relative;
+  padding: 0;
 }
 
 @media (min-width: 1024px) {
@@ -278,3 +311,93 @@ section.hero main .container .links ul li a {
 }
 
 /* End Header and Hero Section */
+/* Start About Section */
+
+section.about .container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+section.about .container .image {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  section.about .container .image:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -25px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 10px solid var(--main-color);
+    z-index: -1;
+  }
+}
+
+section.about .container .text {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+  gap: 20px;
+}
+
+section.about .container .text .heading {
+  position: relative;
+}
+
+section.about .container .text h1 {
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  padding-bottom: 0;
+  background: #fff;
+  color: var(--main-color);
+  font-size: 35px;
+  font-weight: 450;
+}
+
+section.about .container .text hr {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #000;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+section.about .container .text p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: var(--sec-font);
+}
+
+section.about .container .text a {
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  section.about .container {
+    flex-direction: row;
+    gap: 100px;
+  }
+  section.about .container .text {
+    gap: 30px;
+    text-align: left;
+  }
+  section.about .container .text h1 {
+    margin: 0;
+    font-size: 64px;
+  }
+  section.about .container .text a {
+    margin: 0;
+  }
+}
+
+/* End About Section */
