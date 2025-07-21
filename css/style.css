@@ -88,6 +88,37 @@ a.main-btn:hover:after {
   left: 5px;
 }
 
+.heading {
+  position: relative;
+}
+
+.heading h1 {
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  padding-bottom: 0;
+  background: #fff;
+  color: var(--main-color);
+  font-size: 42px;
+  font-weight: 450;
+}
+
+.heading hr {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #000;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  .heading h1 {
+    font-size: 64px;
+  }
+}
+
 /* End Components and Utilities */
 /* Start Header and Hero Section */
 
