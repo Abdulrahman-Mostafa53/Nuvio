@@ -683,3 +683,229 @@ section.services .container .wrapper .service p {
   }
 }
 /* End Works Section */
+/* Start Contact Section */
+
+section.contact {
+  background: var(--main-bg-color);
+}
+
+section.contact h1 {
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  padding-bottom: 0;
+  color: var(--main-color);
+  font-size: 42px;
+  font-weight: 450;
+  position: relative;
+  border-bottom: 2px solid #000;
+  margin-bottom: 40px;
+}
+
+section.contact .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+section.contact .wrapper h2 {
+  font: 450 30px var(--main-font);
+  color: var(--main-color);
+  letter-spacing: -4px;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+section.contact .wrapper h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: #000;
+}
+
+section.contact .wrapper p:first-of-type {
+  font: 500 20px var(--sec-font);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+section.contact .wrapper form {
+  width: 100%;
+  display: grid;
+  gap: 15px;
+  justify-items: flex-end;
+}
+
+section.contact .wrapper form input,
+section.contact .wrapper .message form textarea {
+  padding: 15px;
+  font: bold 20px var(--sec-font);
+  border: 1px solid var(--main-color);
+  outline: none;
+  width: 100%;
+}
+
+section.contact .wrapper .message form textarea {
+  height: 300px;
+  resize: none;
+}
+
+section.contact .wrapper form button {
+  all: unset;
+  padding: 5px 15px;
+  font: bold 20px var(--sec-font);
+  box-shadow: 3px 3px 0 var(--main-color);
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+  transition: .2s;
+}
+
+section.contact .wrapper form button:hover {
+  box-shadow: 6px 6px 0 var(--main-color);
+}
+
+section.contact .wrapper .separator {
+  position: relative;
+}
+
+section.contact .wrapper .separator div {
+  position: relative;
+  margin: auto;
+  width: fit-content;
+  padding: 15px;
+  font-size: 30px;
+  background-color: var(--main-bg-color);
+  border: 2px solid #000;
+}
+
+section.contact .wrapper .separator hr {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border: 1px solid #000;
+}
+
+section.contact .wrapper .newsletter form {
+  margin-bottom: 40px;
+}
+
+section.contact .wrapper .newsletter p:nth-of-type(2) {
+  font: 500 21px var(--sec-font);
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+
+section.contact .wrapper .newsletter p:nth-of-type(2):before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  background-color: var(--main-color);
+  left: 0;
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  section.contact .wrapper .message form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.contact .wrapper .message form input:nth-of-type(3),
+  section.contact .wrapper .message form textarea {
+    grid-column: 1 / 3;
+  }
+  section.contact .wrapper .message form button {
+    grid-column: 2;
+  }
+  section.contact .wrapper h2 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  section.contact h1  {
+    margin-bottom: 0;
+  }
+  section.contact h1  {
+    font-size: 64px;
+  }
+  section.contact .wrapper {
+    flex-direction: row;
+  }
+  section.contact .wrapper div:not(.separator) {
+    flex: 1;
+    margin-top: 40px;
+  }
+  section.contact .wrapper .separator div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  section.contact .wrapper .separator hr {
+    height: 100%;
+  }
+}
+
+/* End Contact Section */
+/* Start Footer */
+
+footer {
+  padding: 20px 0;
+  background-color: var(--main-color);
+  color: #fff;
+  text-align: center;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer .container p {
+  font: 100 16px var(--sec-font);
+  line-height: 1.6;
+}
+
+footer .container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 5px;
+}
+
+footer .container a {
+  color: #fff;
+}
+
+footer .container p a {
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+  transition: .2s;
+}
+
+footer .container p a:hover {
+  transform: translateY(-1px);
+}
+
+@media (min-width: 1024px) {
+  footer .container {
+    flex-direction: row;
+  }
+}
+
+/* End Footer */
