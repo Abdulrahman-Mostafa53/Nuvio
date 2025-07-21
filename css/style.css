@@ -90,6 +90,7 @@ a.main-btn:hover:after {
 
 .heading {
   position: relative;
+  margin-bottom: 40px;
 }
 
 .heading h1 {
@@ -580,3 +581,28 @@ section.about .container .text a {
   }
 }
 /* End Experience Section */
+
+/* Start Works Section */
+.Works .boxes{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-gap: 20px;
+}
+.Works .box {
+  display: flex;
+}
+.Works .box img{
+  width: 100%;
+}
+.Works .main-btn{
+  margin: auto;
+  margin-top: 40px;
+}
+@media (max-width: 768px){
+  .Works .boxes{
+    display: grid;
+    
+
+  }
+}
+/* End Works Section */
